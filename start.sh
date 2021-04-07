@@ -25,6 +25,6 @@ fi
 pushd /tmp/
 git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/Diagnoser.git
 pushd Docker_AE_NA
-python run.py docker ${USERNAME} ${KEY}
+python docker.py ${USERNAME} ${KEY}
 popd
 popd
