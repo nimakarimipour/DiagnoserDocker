@@ -1,3 +1,3 @@
 docker rmi --force diagnoser
-docker build -t diagnoser .
+docker build --no-cache -t diagnoser .
 docker run diagnoser
