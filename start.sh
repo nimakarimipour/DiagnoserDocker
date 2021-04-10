@@ -6,6 +6,7 @@ source /var/diagnoser/git.config
 git config --global user.email "${EMAIL}"
 git config --global user.name "${USERNAME}"
 git config --global push.default simple
+git config pull.rebase false
 
 
 if [ mvn dependency:get -Dartifact=edu.ucr.cs.riple:nullaway:0.7.12-SNAPSHOT -o -DrepoUrl=file://~/.m2/repository ]; then
