@@ -31,6 +31,6 @@ popd
 pushd /tmp/
 git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/Docker_AE_NA.git
 pushd Docker_AE_NA
-python3 run.py ${USERNAME} ${KEY}
+python3 start.py ${USERNAME} ${KEY}
 popd
 popd
