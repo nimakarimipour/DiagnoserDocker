@@ -17,7 +17,7 @@ else
     pushd NullAway
     git checkout autofix
 
-    ./gradlew install
+    ./gradlew installArchives
     
     popd
     popd
