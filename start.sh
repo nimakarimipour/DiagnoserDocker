@@ -15,7 +15,7 @@ else
     pushd /tmp/
     git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/NullAway.git
     pushd NullAway
-    git checkout autofix
+    git checkout method_metadata
 
     ./gradlew publishToMavenLocal
     
@@ -26,6 +26,9 @@ fi
 
 pushd /tmp/
 git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/Diagnoser.git
+pushd Diagnoser
+git checkout batch
+popd
 popd
 
 pushd /tmp/
