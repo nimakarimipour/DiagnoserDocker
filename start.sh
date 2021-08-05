@@ -9,19 +9,14 @@ git config --global push.default simple
 git config --global pull.rebase false
 
 
-if [ mvn dependency:get -Dartifact=edu.ucr.cs.riple:nullaway:0.7.12-SNAPSHOT -o -DrepoUrl=file://~/.m2/repository ]; then
-    :
-else
-    pushd /tmp/
-    git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/NullAway.git
-    pushd NullAway
-    git checkout method_metadata
 
-    ./gradlew publishToMavenLocal
-    
-    popd
-    popd
-fi
+pushd /tmp/
+git clone https://${USERNAME}:${KEY}@github.com/nimakarimipour/NullAway.git
+pushd NullAway
+git checkout autofix
+./gradlew publishToMavenLocal
+popd
+popd
 
 
 pushd /tmp/
