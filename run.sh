@@ -1,3 +1,2 @@
-docker rmi --force diagnoser
-docker build --no-cache -t diagnoser .
-docker run diagnoser
+docker rmi --force annotator
+docker build --no-cache -t annotator .

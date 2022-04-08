@@ -75,7 +75,8 @@ VOLUME $GRADLE_USER_HOME
 RUN apt-get update -y
 
 # Install python
-RUN apt-get install -y python
+RUN apt-get install -y python && \
+    apt-get -y install python3-pip
 
 # Install git
 RUN apt-get install -y git
@@ -106,4 +107,4 @@ COPY ./start.sh /var/diagnoser/start.sh
 COPY ./git.config /var/diagnoser/git.config
 RUN chmod +x /var/diagnoser/start.sh
 
-ENTRYPOINT [ "./var/diagnoser/start.sh" ]
+CMD ["tail", "-f", "/dev/null"]
